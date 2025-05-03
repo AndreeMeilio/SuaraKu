@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:font="@font/lora_regular"
+        android:fontStyle="normal"
+        android:fontWeight="@integer/font_weight_regular"/>
+
+    <font
+        android:font="@font/lora_medium"
+        android:fontStyle="normal"
+        android:fontWeight="@integer/font_weight_medium"/>
+
+    <font
+        android:font="@font/lora_semibold"
+        android:fontStyle="normal"
+        android:fontWeight="@integer/font_weight_semibold"/>
+
+    <font
+        android:font="@font/lora_bold"
+        android:fontStyle="normal"
+        android:fontWeight="@integer/font_weight_bold"/>
+
+<!--    Italic Version-->
+    <font
+        android:font="@font/lora_italic"
+        android:fontStyle="italic"
+        android:fontWeight="@integer/font_weight_regular"/>
+
+    <font
+        android:font="@font/lora_mediumitalic"
+        android:fontStyle="italic"
+        android:fontWeight="@integer/font_weight_medium"/>
+
+    <font
+        android:font="@font/lora_semibolditalic"
+        android:fontStyle="italic"
+        android:fontWeight="@integer/font_weight_semibold"/>
+
+    <font
+        android:font="@font/lora_bolditalic"
+        android:fontStyle="italic"
+        android:fontWeight="@integer/font_weight_bold"/>
+
+</font-family>
