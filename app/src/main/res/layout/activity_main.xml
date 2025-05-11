@@ -8,12 +8,124 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/judulAplikasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SuaraKu"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        style="@style/font_headline"
+        android:textStyle="italic"
+        android:textFontWeight="@integer/font_weight_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/captionAplikasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menuliskan pikiran Anda dapat membantu Anda memahaminya dengan lebih baik"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        style="@style/font_sub_headline"
+        android:textStyle="italic"
+        android:textFontWeight="@integer/font_weight_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/judulAplikasi"/>
+
+    <TextView
+        android:id="@+id/statusJudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        style="@style/font_body"
+        android:textFontWeight="@integer/font_weight_bold"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/captionAplikasi"/>
+
+    <HorizontalScrollView
+        android:id="@+id/statusSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusJudul">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/style_status"
+                android:text="Journal\n12"
+                style="@style/font_body"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/style_status"
+                android:text="Kebahagiaan\n12"
+                style="@style/font_body"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/style_status"
+                android:text="Kesedihan\n12"
+                style="@style/font_body"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/style_status"
+                android:text="Rencana Selanjutnya\n12"
+                style="@style/font_body"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/listJournalJudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar Journal"
+        style="@style/font_body"
+        android:textFontWeight="@integer/font_weight_bold"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusSection"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listJournalRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/spacerMainBottom"
+        app:layout_constraintTop_toBottomOf="@+id/listJournalJudul"/>
+    <Space
+        android:id="@+id/spacerMainBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

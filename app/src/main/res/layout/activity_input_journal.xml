@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".input_journal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/inputJournalTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Journaling"
+                style="@style/font_headline"
+                android:textFontWeight="@integer/font_weight_bold"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/inputJournalSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kenali dirimu sendiri dengan cara menuliskan apa yang ada di pikiranmu tentangmu tanpa ada batasan."
+                style="@style/font_sub_headline"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:justificationMode="inter_word"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputJournalTitle"/>
+
+            <LinearLayout
+                android:id="@+id/judulJournalSection"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputJournalSubTitle">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Judul Journaling"
+                    style="@style/font_body"/>
+
+                <EditText
+                    android:id="@+id/judulJournalingEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/font_body"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_input"
+                    android:hint="Contoh: Membuat orang senang"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/isiJournalSection"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/judulJournalSection">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Isi Journaling"
+                    style="@style/font_body"/>
+
+                <EditText
+                    android:id="@+id/isiJournalingEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/font_body"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="15"
+                    android:gravity="top"
+                    android:background="@drawable/border_input"
+                    android:hint="Tuliskan apa yang ada dipikiran anda"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bahagiaJournalSection"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/isiJournalSection">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kebahagian"
+                    style="@style/font_body"/>
+
+                <EditText
+                    android:id="@+id/bahagiaJournalingEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/font_body"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:gravity="top"
+                    android:background="@drawable/border_input"
+                    android:hint="Tuliskan apa yang membuatmu bahagia hari ini"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sedihJournalSection"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bahagiaJournalSection">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kesedihan"
+                    style="@style/font_body"/>
+
+                <EditText
+                    android:id="@+id/sedihJournalingEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/font_body"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:gravity="top"
+                    android:background="@drawable/border_input"
+                    android:hint="Tuliskan apa yang membuatmu sedih hari ini"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nextToDoJournalSection"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sedihJournalSection">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rencana Selanjutnya"
+                    style="@style/font_body"/>
+
+                <EditText
+                    android:id="@+id/nextToDoJournalingEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/font_body"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:gravity="top"
+                    android:background="@drawable/border_input"
+                    android:hint="Tuliskan rencanamu selanjutnya"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/submitButtonSection"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nextToDoJournalSection">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/submitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/font_body"
+                    android:textAllCaps="false"
+                    android:background="@drawable/style_button"
+                    android:backgroundTint="@null"
+                    android:textFontWeight="@integer/font_weight_bold"
+                    android:text="Simpan Journal Hari Ini"/>
+            </LinearLayout>
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/submitButtonSection"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailJournal">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/judulJournal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/font_headline"
+                android:textFontWeight="@integer/font_weight_bold"
+                android:text="Mencari Kebahagiaan"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tanggalJournal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/font_sub_headline"
+                android:text="15 Januari 2025"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/judulJournal"/>
+
+            <TextView
+                android:id="@+id/isiJournal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Morbi dictum, mauris ac dictum dapibus, velit nulla tincidunt tellus, quis malesuada purus urna sit amet ligula. Integer id risus leo. Etiam eget mi quam. Sed sit amet augue pharetra, dignissim magna vel, hendrerit odio. Proin vitae dui eget leo porttitor tincidunt eu vitae risus. Aliquam vitae lacinia enim. Aliquam scelerisque nibh at faucibus vulputate. Nunc vitae mi ante. Duis ornare, justo non luctus maximus, purus arcu lacinia arcu, nec porttitor tortor nunc quis orci. Donec aliquet, velit a placerat convallis, eros turpis tincidunt mauris, ac interdum est erat tristique lectus. Praesent tristique dolor sem, ac dignissim tellus cursus sed. Praesent ut tortor nulla. Nunc purus lectus, elementum nec rhoncus eget, pharetra id metus. Integer aliquam est eu tellus mollis fermentum. Vestibulum sodales ut velit congue porta. Maecenas lobortis venenatis ipsum eget consectetur."
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="32dp"
+                style="@style/font_body"
+                android:background="@drawable/border_body"
+                android:justificationMode="inter_word"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tanggalJournal"/>
+
+            <LinearLayout
+                android:id="@+id/bahagiaSection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="24dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/isiJournal">
+
+                <LinearLayout
+                    android:id="@+id/bahagiaTitleContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/bahagiaTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anda Bahagia Karena"
+                        android:textFontWeight="@integer/font_weight_bold"
+                        style="@style/font_body"/>
+
+                    <ImageView
+                        android:id="@+id/happyIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/happy"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/bahagiaJournal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut faucibus tellus. Vivamus eget nisi risus. Integer feugiat fermentum nibh luctus iaculis. Sed facilisis nisl id felis tristique imperdiet. Maecenas malesuada leo a porttitor convallis. Curabitur sed arcu sit amet est iaculis commodo vel nec dolor."
+                    style="@style/font_body"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_body"
+                    android:justificationMode="inter_word" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sedihSection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="24dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bahagiaSection">
+
+                <LinearLayout
+                    android:id="@+id/sedihTitleContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/sedihTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anda Sedih Karena"
+                        android:textFontWeight="@integer/font_weight_bold"
+                        style="@style/font_body"/>
+
+                    <ImageView
+                        android:id="@+id/sedihIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sedih"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/sedihJournal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut faucibus tellus. Vivamus eget nisi risus. Integer feugiat fermentum nibh luctus iaculis. Sed facilisis nisl id felis tristique imperdiet. Maecenas malesuada leo a porttitor convallis. Curabitur sed arcu sit amet est iaculis commodo vel nec dolor."
+                    style="@style/font_body"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_body"
+                    android:justificationMode="inter_word"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nextToDoSection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="24dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sedihSection">
+
+                <TextView
+                    android:id="@+id/nextToDoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selanjutnya Ngapain Nih"
+                    android:textFontWeight="@integer/font_weight_bold"
+                    style="@style/font_body"/>
+
+                <TextView
+                    android:id="@+id/nextToDoJournal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut faucibus tellus. Vivamus eget nisi risus. Integer feugiat fermentum nibh luctus iaculis. Sed facilisis nisl id felis tristique imperdiet. Maecenas malesuada leo a porttitor convallis. Curabitur sed arcu sit amet est iaculis commodo vel nec dolor."
+                    style="@style/font_body"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_body"
+                    android:justificationMode="inter_word"/>
+            </LinearLayout>
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nextToDoSection"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
