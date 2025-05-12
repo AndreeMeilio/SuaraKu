@@ -7,19 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/judulAplikasi"
+    <LinearLayout
+        android:id="@+id/titleSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SuaraKu"
+        android:orientation="horizontal"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="32dp"
-        style="@style/font_headline"
-        android:textStyle="italic"
-        android:textFontWeight="@integer/font_weight_bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/judulAplikasi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SuaraKu"
+            style="@style/font_headline"
+            android:textStyle="italic"
+            android:textFontWeight="@integer/font_weight_bold"/>
+
+        <ImageButton
+            android:id="@+id/historyImageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/style_button"
+            android:src="@drawable/baseline_history_24"/>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/captionAplikasi"
         android:layout_width="match_parent"
@@ -32,7 +47,7 @@
         android:textFontWeight="@integer/font_weight_bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/judulAplikasi"/>
+        app:layout_constraintTop_toBottomOf="@id/titleSection"/>
 
     <TextView
         android:id="@+id/statusJudul"
@@ -97,6 +112,22 @@
         </LinearLayout>
     </HorizontalScrollView>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createNewJournal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/font_body"
+        android:textAllCaps="false"
+        android:background="@drawable/style_button"
+        android:backgroundTint="@null"
+        android:textFontWeight="@integer/font_weight_bold"
+        android:text="Buat Journal Baru"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusSection"/>
+
     <TextView
         android:id="@+id/listJournalJudul"
         android:layout_width="match_parent"
@@ -105,10 +136,10 @@
         style="@style/font_body"
         android:textFontWeight="@integer/font_weight_bold"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statusSection"/>
+        app:layout_constraintTop_toBottomOf="@+id/createNewJournal"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listJournalRV"

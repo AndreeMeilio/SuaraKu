@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".input_journal">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -65,6 +60,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/font_body"
+                    android:textColor="@color/teks_color"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/border_input"
                     android:hint="Contoh: Membuat orang senang"/>
@@ -92,6 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/font_body"
+                    android:textColor="@color/teks_color"
                     android:layout_marginTop="8dp"
                     android:inputType="textMultiLine"
                     android:minLines="15"
@@ -122,6 +119,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/font_body"
+                    android:textColor="@color/teks_color"
                     android:layout_marginTop="8dp"
                     android:inputType="textMultiLine"
                     android:minLines="5"
@@ -152,6 +150,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/font_body"
+                    android:textColor="@color/teks_color"
                     android:layout_marginTop="8dp"
                     android:inputType="textMultiLine"
                     android:minLines="5"
@@ -182,6 +181,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/font_body"
+                    android:textColor="@color/teks_color"
                     android:layout_marginTop="8dp"
                     android:inputType="textMultiLine"
                     android:minLines="5"
@@ -220,6 +220,5 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/submitButtonSection"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

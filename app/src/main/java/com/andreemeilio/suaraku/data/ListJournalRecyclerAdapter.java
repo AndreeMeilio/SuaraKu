@@ -1,6 +1,7 @@
 package com.andreemeilio.suaraku.data;
 
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.andreemeilio.suaraku.DetailJournal;
+import com.andreemeilio.suaraku.MainActivity;
 import com.andreemeilio.suaraku.R;
 import com.andreemeilio.suaraku.model.JournalModel;
 
@@ -37,7 +40,15 @@ public class ListJournalRecyclerAdapter extends RecyclerView.Adapter<ListJournal
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Anda Click" + item.getJudul(), Toast.LENGTH_SHORT).show();
+                Intent resultIntent = new Intent(v.getContext(), DetailJournal.class);
+                resultIntent.putExtra("tanggalJournal", item.getTanggal().toString());
+                resultIntent.putExtra("judulJournal", item.getJudul());
+                resultIntent.putExtra("isiJournal", item.getIsi());
+                resultIntent.putExtra("bahagiaJournal", item.getKebahagiaan());
+                resultIntent.putExtra("sedihJournal", item.getKesedihan());
+                resultIntent.putExtra("nextToDoJournal", item.getNextToDo());
+                v.getContext().startActivity(resultIntent);
+
             }
         });
     }

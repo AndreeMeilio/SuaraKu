@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoryDetail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/historyDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rincian Riwayat"
+                style="@style/font_headline"
+                android:textFontWeight="@integer/font_weight_bold"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/historyDetailSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rincian riwayat berupa data tanggal pembuatan / pengubahan dan deskripsi aksi yang dilakukan oleh Anda"
+                style="@style/font_sub_headline"
+                android:justificationMode="inter_word"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/historyDetailTitle"/>
+
+            <LinearLayout
+                android:id="@+id/historyActionNameSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/historyDetailSubTitle">
+
+                <TextView
+                    android:id="@+id/historyActionNameTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nama Aksi"
+                    style="@style/font_body"
+                    />
+
+                <TextView
+                    android:id="@+id/historyActionNameValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="CREATE"
+                    android:textFontWeight="@integer/font_weight_bold"
+                    style="@style/font_body"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/historyJudulSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/historyActionNameSection">
+
+                <TextView
+                    android:id="@+id/historyJudulTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Judul Journal"
+                    style="@style/font_body"
+                    />
+
+                <TextView
+                    android:id="@+id/historyJudulValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Mencari Kebahagiaan"
+                    android:textFontWeight="@integer/font_weight_bold"
+                    style="@style/font_body"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/historyTanggalCreatedSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/historyJudulSection">
+
+                <TextView
+                    android:id="@+id/historyTanggalCreatedTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tanggal Dibuat"
+                    style="@style/font_body"
+                    />
+
+                <TextView
+                    android:id="@+id/historyTanggalCreatedValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="25 Mei 2025"
+                    android:textFontWeight="@integer/font_weight_bold"
+                    style="@style/font_body"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/historyTanggalUpdatedSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/historyTanggalCreatedSection">
+
+                <TextView
+                    android:id="@+id/historyTanggalUpdatedTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tanggal Diubah"
+                    style="@style/font_body"
+                    />
+
+                <TextView
+                    android:id="@+id/historyTanggalUpdatedValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="-"
+                    android:textFontWeight="@integer/font_weight_bold"
+                    style="@style/font_body"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/historyDescriptionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi Pembuatan"
+                style="@style/font_body"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/historyTanggalUpdatedSection"
+                />
+
+            <TextView
+                android:id="@+id/historyDescriptionValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Anda membuat data journal dengan judul Mencari Kebahagiaan"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="16dp"
+                style="@style/font_body"
+                android:background="@drawable/border_body"
+                android:justificationMode="inter_word"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/historyDescriptionTitle"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

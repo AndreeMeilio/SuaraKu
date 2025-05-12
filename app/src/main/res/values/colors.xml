@@ -3,8 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="primary">#FFACE1AF</color>
+    <color name="primary">#FF76e37c</color>
     <color name="accent">#FFB0EBB4</color>
-    <color name="background">#FFE0FBE2</color>
+    <color name="background">#FFebfcec</color>
     <color name="teks_color">#FF3C4A3E</color>
 </resources>

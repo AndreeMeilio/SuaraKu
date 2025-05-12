@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/item_journal"
+    android:layout_marginBottom="8dp">
+    <Space
+        android:id="@+id/spacerTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:id="@+id/mainItemSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spacerTop">
+        <TextView
+            android:id="@+id/itemHistoryJournal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Berbagi Kebahagiaan"
+            style="@style/font_body"
+            android:background="@color/white"
+            android:textFontWeight="@integer/font_weight_bold"/>
+        <TextView
+            android:id="@+id/itemHistoryActionName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CREATED"
+            android:gravity="end"
+            style="@style/font_body"
+            android:background="@color/white"
+            android:textFontWeight="@integer/font_weight_bold"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/itemHistoryTanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="15 Januari 2025"
+        style="@style/font_sub_headline"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainItemSection"/>
+
+    <Space
+        android:id="@+id/spacerBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemHistoryTanggal"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
