@@ -49,69 +49,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleSection"/>
 
-    <TextView
-        android:id="@+id/statusJudul"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Status"
-        style="@style/font_body"
-        android:textFontWeight="@integer/font_weight_bold"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/captionAplikasi"/>
-
-    <HorizontalScrollView
-        android:id="@+id/statusSection"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statusJudul">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/style_status"
-                android:text="Journal\n12"
-                style="@style/font_body"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/style_status"
-                android:text="Kebahagiaan\n12"
-                style="@style/font_body"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/style_status"
-                android:text="Kesedihan\n12"
-                style="@style/font_body"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/style_status"
-                android:text="Rencana Selanjutnya\n12"
-                style="@style/font_body"/>
-
-        </LinearLayout>
-    </HorizontalScrollView>
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/createNewJournal"
         android:layout_width="match_parent"
@@ -126,7 +63,7 @@
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statusSection"/>
+        app:layout_constraintTop_toBottomOf="@+id/captionAplikasi"/>
 
     <TextView
         android:id="@+id/listJournalJudul"

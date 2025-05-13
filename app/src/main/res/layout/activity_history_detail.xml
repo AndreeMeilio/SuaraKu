@@ -141,38 +141,6 @@
                     />
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/historyTanggalUpdatedSection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginHorizontal="24dp"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/historyTanggalCreatedSection">
-
-                <TextView
-                    android:id="@+id/historyTanggalUpdatedTitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Tanggal Diubah"
-                    style="@style/font_body"
-                    />
-
-                <TextView
-                    android:id="@+id/historyTanggalUpdatedValue"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="end"
-                    android:text="-"
-                    android:textFontWeight="@integer/font_weight_bold"
-                    style="@style/font_body"
-                    />
-            </LinearLayout>
-
             <TextView
                 android:id="@+id/historyDescriptionTitle"
                 android:layout_width="match_parent"
@@ -183,7 +151,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/historyTanggalUpdatedSection"
+                app:layout_constraintTop_toBottomOf="@id/historyTanggalCreatedSection"
                 />
 
             <TextView

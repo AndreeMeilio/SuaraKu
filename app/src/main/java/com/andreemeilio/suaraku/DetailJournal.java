@@ -1,6 +1,7 @@
 package com.andreemeilio.suaraku;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -17,6 +18,8 @@ public class DetailJournal extends AppCompatActivity {
             bahagiaJournal,
             sedihJournal,
             nextToDoJournal;
+
+    Button detailHapusJournalButton, detailUbahJournalButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

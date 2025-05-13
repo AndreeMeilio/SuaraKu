@@ -30,7 +30,6 @@ public class HistoryDetail extends AppCompatActivity {
         actionName = (TextView) findViewById(R.id.historyActionNameValue);
         judulJournal = (TextView) findViewById(R.id.historyJudulValue);
         tanggalCreated = (TextView) findViewById(R.id.historyTanggalCreatedValue);
-        tanggalUpdated = (TextView) findViewById(R.id.historyTanggalUpdatedValue);
         description = (TextView) findViewById(R.id.historyDescriptionValue);
 
         if (getIntent().getStringExtra("actionName") != null){
@@ -49,12 +48,6 @@ public class HistoryDetail extends AppCompatActivity {
             tanggalCreated.setText(getIntent().getStringExtra("tanggalCreated"));
         } else {
             tanggalCreated.setText("-");
-        }
-
-        if (getIntent().getStringExtra("tanggalUpdated") != null){
-            tanggalUpdated.setText(getIntent().getStringExtra("tanggalUpdated"));
-        } else {
-            tanggalUpdated.setText("-");
         }
 
         if (getIntent().getStringExtra("description") != null){

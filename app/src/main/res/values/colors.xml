@@ -7,4 +7,7 @@
     <color name="accent">#FFB0EBB4</color>
     <color name="background">#FFebfcec</color>
     <color name="teks_color">#FF3C4A3E</color>
+
+    <color name="hint_color">#FF8e9094</color>
+    <color name="red">#FFf28383</color>
 </resources>

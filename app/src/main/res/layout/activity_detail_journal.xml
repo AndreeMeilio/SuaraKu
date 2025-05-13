@@ -43,18 +43,31 @@
                 app:layout_constraintTop_toBottomOf="@+id/judulJournal"/>
 
             <TextView
+                android:id="@+id/isiJournalTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Isi Journal"
+                android:textFontWeight="@integer/font_weight_bold"
+                style="@style/font_body"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tanggalJournal"/>
+
+            <TextView
                 android:id="@+id/isiJournal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Morbi dictum, mauris ac dictum dapibus, velit nulla tincidunt tellus, quis malesuada purus urna sit amet ligula. Integer id risus leo. Etiam eget mi quam. Sed sit amet augue pharetra, dignissim magna vel, hendrerit odio. Proin vitae dui eget leo porttitor tincidunt eu vitae risus. Aliquam vitae lacinia enim. Aliquam scelerisque nibh at faucibus vulputate. Nunc vitae mi ante. Duis ornare, justo non luctus maximus, purus arcu lacinia arcu, nec porttitor tortor nunc quis orci. Donec aliquet, velit a placerat convallis, eros turpis tincidunt mauris, ac interdum est erat tristique lectus. Praesent tristique dolor sem, ac dignissim tellus cursus sed. Praesent ut tortor nulla. Nunc purus lectus, elementum nec rhoncus eget, pharetra id metus. Integer aliquam est eu tellus mollis fermentum. Vestibulum sodales ut velit congue porta. Maecenas lobortis venenatis ipsum eget consectetur."
                 android:layout_marginHorizontal="24dp"
-                android:layout_marginVertical="32dp"
+                android:layout_marginVertical="16dp"
                 style="@style/font_body"
                 android:background="@drawable/border_body"
                 android:justificationMode="inter_word"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tanggalJournal"/>
+                app:layout_constraintTop_toBottomOf="@+id/isiJournalTitle"/>
 
             <LinearLayout
                 android:id="@+id/bahagiaSection"
@@ -170,6 +183,8 @@
                     android:background="@drawable/border_body"
                     android:justificationMode="inter_word"/>
             </LinearLayout>
+
+
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
